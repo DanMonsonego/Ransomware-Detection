@@ -3,9 +3,9 @@ import subprocess
 import time
 import pandas as pd
 # Paths
-procmon_path = r"C:\Users\monso\OneDrive\Desktop\Repos\Ransomware_detection\Process_Monitor\Procmon64.exe"
-log_file_path = r"C:\Users\monso\OneDrive\Desktop\Repos\Ransomware_detection\Process_Monitor\procmon_log.pml"
-csv_file_path = r"C:\Users\monso\OneDrive\Desktop\Repos\Ransomware_detection\data_csv\procmon_log.csv"
+procmon_path = r"Procmon64.exe"
+log_file_path = r"procmon_log.pml"
+csv_file_path = r"procmon_log.csv"
 
 # Function to start Process Monitor
 def start_procmon():
