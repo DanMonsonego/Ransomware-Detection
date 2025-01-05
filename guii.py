@@ -7,12 +7,12 @@ from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 import time
 
 # Paths
-procmon_path = r"C:\Users\monso\OneDrive\Desktop\Repos\Ransomware_detection\Process_Monitor\Procmon64.exe"
-procmon_log_path = r"C:\Users\monso\OneDrive\Desktop\Repos\Ransomware_detection\Process_Monitor\procmon_log.pml"
-csv_log_path = r"C:\Users\monso\OneDrive\Desktop\Repos\Ransomware_detection\data_csv\procmon_log.csv"
-preprocessed_log_path = r"C:\Users\monso\OneDrive\Desktop\Repos\Ransomware_detection\data_csv\preprocessed_procmon_log.csv"
-model_path = r"C:\Users\monso\OneDrive\Desktop\Repos\Ransomware_detection\models\gradient_boosting_modelli.h5"
-sample_csv_path = r"C:\Users\monso\OneDrive\Desktop\Repos\Ransomware_detection\data_csv\sample.csv"
+procmon_path = r"Process_Monitor\Procmon64.exe"
+procmon_log_path = r"\Process_Monitor\procmon_log.pml"
+csv_log_path = r"\data_csv\procmon_log.csv"
+preprocessed_log_path = r"\data_csv\preprocessed_procmon_log.csv"
+model_path = r"\models\gradient_boosting_modelli.h5"
+sample_csv_path = r"\data_csv\sample.csv"
 
 # Function to start procmon.exe, process the log, and preprocess it
 def monitor():
