@@ -8,7 +8,7 @@ import seaborn as sns
 import pickle
 
 # Load the dataset
-annex_a_file_path = 'C:/Users/monso/OneDrive/Desktop/Repos/Ransomware_detection/data_csv/Annex A - Dataset with 50 chosen features.csv'  # Update the path if necessary
+annex_a_file_path = 'Dataset with 50 chosen features.csv'  # Update the path if necessary
 annex_a_df = pd.read_csv(annex_a_file_path)
 
 # Define the important features and target variable
@@ -48,7 +48,7 @@ sns.heatmap(conf_matrix, annot=True, fmt="d", cmap="Blues", xticklabels=label_en
 plt.xlabel('Predicted')
 plt.ylabel('Actual')
 plt.title('Confusion Matrix')
-plt.savefig('C:/Users/monso/OneDrive/Desktop/Repos/Ransomware_detection/Figures/confusion_matrix.png')  # Save the plot
+plt.savefig('Figures/confusion_matrix.png')  # Save the plot
 plt.show()
 
 # Plot feature importance
@@ -60,16 +60,16 @@ plt.barh(range(len(sorted_idx)), feature_importance[sorted_idx], align='center')
 plt.yticks(range(len(sorted_idx)), [important_features[i] for i in sorted_idx])
 plt.xlabel('Feature Importance')
 plt.title('Gradient Boosting Feature Importance')
-plt.savefig('C:/Users/monso/OneDrive/Desktop/Repos/Ransomware_detection/Figures/feature_importance.png')  # Save the plot
+plt.savefig('/Figures/feature_importance.png')  # Save the plot
 plt.show()
 
 # Save the results and model
-annex_a_df.to_csv('C:/Users/monso/OneDrive/Desktop/Repos/Ransomware_detection/data_csv/annex_a_with_predictions.csv', index=False)
+annex_a_df.to_csv('annex_a_with_predictions.csv', index=False)
 pd.DataFrame(conf_matrix, index=label_encoder.classes_, columns=label_encoder.classes_).to_csv('C:/Users/monso/OneDrive/Desktop/Repos/Ransomware_detection/Figures/confusion_matrix.csv')
 model_output = {
     "model": model,
     "label_encoder": label_encoder
 }
 
-with open('C:/Users/monso/OneDrive/Desktop/Repos/Ransomware_detection/models/gradient_boosting_modelli.h5', 'wb') as f:
+with open('models/gradient_boosting_modelli.h5', 'wb') as f:
     pickle.dump(model_output, f)
